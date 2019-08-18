@@ -20,7 +20,7 @@ export default class Search extends Component {
   }
 
   onTextChange = e => {
-
+    const val = e.target.value
     this.setState(
       {
         [e.target.name]: val
@@ -46,7 +46,7 @@ export default class Search extends Component {
     })
   };
   render() {
-    console.log(`${process.env.REACT_APP_API_KEY}`);
+    
     return (
       <div>
         <TextField
