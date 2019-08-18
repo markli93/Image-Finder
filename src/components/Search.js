@@ -20,7 +20,7 @@ export default class Search extends Component {
   }
 
   onTextChange = e => {
-    const val = e.target.value
+
     this.setState(
       {
         [e.target.name]: val
