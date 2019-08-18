@@ -14,7 +14,6 @@ export default class Search extends Component {
       searchText: "",
       amount: 15,
       apiUrl: "https://pixabay.com/api",
-      apiKey: process.env.REACT_APP_API_KEY,
       image: []
     };
   }
@@ -30,7 +29,7 @@ export default class Search extends Component {
                 image: []
             })
           }else{
-            axios.get(`${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchText}&per_page=${this.state.amount}`)
+            axios.get(`${this.state.apiUrl}/?key=${process.env.REACT_APP_API_KEY}&q=${this.state.searchText}&per_page=${this.state.amount}`)
             .then(res =>
               this.setState({
                 image: res.data.hits
@@ -46,7 +45,7 @@ export default class Search extends Component {
     })
   };
   render() {
-    
+
     return (
       <div>
         <TextField
