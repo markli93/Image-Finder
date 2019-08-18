@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Setup with api key from pixabay in order to run
 
 ## Available Scripts
 
