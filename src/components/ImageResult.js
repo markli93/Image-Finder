@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import {GridList, GridTile} from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
 import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 
 
 export default class ImageResults extends Component {
@@ -42,13 +41,17 @@ export default class ImageResults extends Component {
                             key={img.id}
                             subtitle={
                                 <span>
-                                    by <strong>{img.user}</strong>
+                                    by <strong>{img.user}</strong> 
+                                    <div>
+                                        view: <strong>{img.views}</strong> downloads: <strong>{img.downloads}</strong>
+                                    </div>
                                 </span>
+                                
                             }
                             actionIcon={
-                                <IconButton onClick={()=> this.handleOpen(img.largeImageURL)}>
+                                <Button onClick={()=> this.handleOpen(img.largeImageURL)}>
                                     <ZoomIn color ="white"/> 
-                                </IconButton>
+                                </Button>
                             }
                         >
                             <img src ={img.largeImageURL} alt=""/>
@@ -60,7 +63,7 @@ export default class ImageResults extends Component {
             imageListContent = null;
         }
         const actions = [
-            <FlatButton label="Close" primary={true} onClick={this.handleClose}/>
+        <Button variant="contained" color='primary' onClick={this.handleClose}>Close</Button>
         ]
         return (
             <div>

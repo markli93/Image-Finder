@@ -67,6 +67,8 @@ export default class Search extends Component {
           <MenuItem value={15} primaryText="15" />
           <MenuItem value={30} primaryText="30" />
           <MenuItem value={50} primaryText="50" />
+          <MenuItem value={75} primaryText="75" />
+          <MenuItem value={100} primaryText="100" />
         </SelectField>
         <br/>
         {this.state.image.length > 0 ? (<ImageResults images = {this.state.image}/>) : null}
