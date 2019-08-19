@@ -1,4 +1,4 @@
-Setup with api key from pixabay in order to run
+live on Heroku : https://image-finder-ml.herokuapp.com/
 
 ## Available Scripts
 
